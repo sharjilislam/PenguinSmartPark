@@ -95,25 +95,4 @@ Automated tests use simulated parking data and in-memory ParkingLot objects.
 
 Tests do not depend on a live database, external API, or CARLA simulator.
 
-## Current Limitations
 
-- Parking lot information is simulated.
-- PostgreSQL persistence is not implemented.
-- React frontend is not implemented.
-- Google Maps integration is not implemented.
-- CARLA is not connected to the backend test workflow.
-- Automated alerts are not implemented.
-- ADA-specific parking recommendations are not implemented.
-
-## Future Improvements
-
-- PostgreSQL database integration
-- CARLA gate-event integration
-- React frontend
-- Google Maps walking directions
-- Parking alerts
-- Administrative parking management
-
-## Academic Purpose
-
-This project was developed for CSCI 5801 Software Engineering at Youngstown State University.
