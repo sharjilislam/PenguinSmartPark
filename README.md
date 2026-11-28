@@ -95,4 +95,33 @@ Automated tests use simulated parking data and in-memory ParkingLot objects.
 
 Tests do not depend on a live database, external API, or CARLA simulator.
 
+## API Endpoints
+
+After starting the application, open `http://127.0.0.1:8000/docs` for interactive API documentation.
+
+- `GET /` - service information
+- `GET /health` - health status
+- `GET /lots` - simulated parking-lot availability
+- `GET /lots/{lot_id}/access?user_type=STUDENT` - access decision for a user type
+- `POST /lots/{lot_id}/events` - regular or ADA `ENTER` and `EXIT` events
+- `POST /recommendations` - eligible recommendations ranked by walking time
+
+The API uses simulated in-memory lots. Restarting the application restores the original demo data.
+
+## Final Testing Summary
+
+The final suite contains 40 automated tests:
+
+- 22 unit tests across ParkingLot, AvailabilityService, RecommendationService, and AccessService
+- 15 component tests across five components: ParkingLot, AvailabilityService, AccessService, RecommendationService, and FastAPI API
+- 3 system tests that exercise access, availability updates, recommendation, and an invalid-event failure path through the API
+
+Run the complete suite from the project directory:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest tests -v
+```
+
+Latest verified result: 40 passed, 1 deprecation warning.
+
 

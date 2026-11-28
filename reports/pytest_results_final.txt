@@ -1,0 +1,55 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\sharj\.codex\.chatgpt-projects\g-p-6afddda7b08c819195544bda352131a0\repo_source\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\sharj\.codex\.chatgpt-projects\g-p-6afddda7b08c819195544bda352131a0\repo_source
+plugins: anyio-4.16.0
+collecting ... collected 40 items
+
+tests/test_access.py::test_valid_student_role PASSED                     [  2%]
+tests/test_access.py::test_invalid_role PASSED                           [  5%]
+tests/test_access.py::test_student_allowed PASSED                        [  7%]
+tests/test_access.py::test_visitor_denied PASSED                         [ 10%]
+tests/test_access.py::test_closed_lot_denied PASSED                      [ 12%]
+tests/test_availability.py::test_regular_vehicle_entry PASSED            [ 15%]
+tests/test_availability.py::test_regular_vehicle_exit PASSED             [ 17%]
+tests/test_availability.py::test_ada_vehicle_entry PASSED                [ 20%]
+tests/test_availability.py::test_entry_into_full_lot PASSED              [ 22%]
+tests/test_availability.py::test_exit_from_empty_lot PASSED              [ 25%]
+tests/test_availability.py::test_invalid_event PASSED                    [ 27%]
+tests/test_component_access.py::test_component_access_allows_eligible_user_in_open_lot PASSED [ 30%]
+tests/test_component_access.py::test_component_access_denies_user_not_in_lot_role_list PASSED [ 32%]
+tests/test_component_access.py::test_component_access_rejects_invalid_user_type PASSED [ 35%]
+tests/test_component_api.py::test_component_api_returns_healthy_status PASSED [ 37%]
+tests/test_component_api.py::test_component_api_combines_lot_lookup_and_access_check PASSED [ 40%]
+tests/test_component_api.py::test_component_api_returns_error_for_unknown_lot PASSED [ 42%]
+tests/test_component_availability.py::test_component_vehicle_entry_updates_availability PASSED [ 45%]
+tests/test_component_availability.py::test_component_vehicle_exit_updates_availability PASSED [ 47%]
+tests/test_component_availability.py::test_component_invalid_event_preserves_state PASSED [ 50%]
+tests/test_component_models.py::test_component_model_reports_regular_and_ada_availability PASSED [ 52%]
+tests/test_component_models.py::test_component_model_reports_full_when_all_spaces_are_used PASSED [ 55%]
+tests/test_component_models.py::test_component_model_rejects_negative_ada_capacity PASSED [ 57%]
+tests/test_component_recommendation.py::test_component_normal_recommendation PASSED [ 60%]
+tests/test_component_recommendation.py::test_component_recommendation_updates_after_entry PASSED [ 62%]
+tests/test_component_recommendation.py::test_component_unauthorized_user_excluded PASSED [ 65%]
+tests/test_parking_lot.py::test_normal_availability PASSED               [ 67%]
+tests/test_parking_lot.py::test_full_parking_lot PASSED                  [ 70%]
+tests/test_parking_lot.py::test_occupancy_exceeds_regular_capacity PASSED [ 72%]
+tests/test_parking_lot.py::test_negative_occupancy PASSED                [ 75%]
+tests/test_parking_lot.py::test_user_eligibility PASSED                  [ 77%]
+tests/test_recommendation.py::test_returns_closest_three_lots PASSED     [ 80%]
+tests/test_recommendation.py::test_excludes_unauthorized_lot PASSED      [ 82%]
+tests/test_recommendation.py::test_excludes_full_lot PASSED              [ 85%]
+tests/test_recommendation.py::test_excludes_closed_lot PASSED            [ 87%]
+tests/test_recommendation.py::test_invalid_user_type PASSED              [ 90%]
+tests/test_recommendation.py::test_invalid_walking_time PASSED           [ 92%]
+tests/test_system.py::test_system_student_finds_eligible_nearest_lots PASSED [ 95%]
+tests/test_system.py::test_system_entry_updates_subsequent_recommendation PASSED [ 97%]
+tests/test_system.py::test_system_invalid_event_returns_error_and_preserves_availability PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\sharj\.codex\.chatgpt-projects\g-p-6afddda7b08c819195544bda352131a0\repo_source\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 40 passed, 1 warning in 0.56s ========================
